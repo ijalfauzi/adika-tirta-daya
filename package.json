@@ -1,5 +1,5 @@
 {
-    "name": "modern-workflow",
+    "name": "adika-tirta-daya",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -10,15 +10,15 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/ijalfauzi/modern-workflow.git"
+      "url": "git+https://github.com/ijalfauzi/adika-tirta-daya.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/ijalfauzi/modern-workflow/issues"
+      "url": "https://github.com/ijalfauzi/adika-tirta-daya/issues"
     },
-    "homepage": "https://github.com/ijalfauzi/modern-workflow#readme",
+    "homepage": "https://github.com/ijalfauzi/adika-tirta-daya#readme",
     "dependencies": {
       "css-minimizer-webpack-plugin": "^4.0.0",
       "lodash": "^4.17.21",
