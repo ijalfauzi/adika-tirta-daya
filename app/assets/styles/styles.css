@@ -1,5 +1,24 @@
-/* Modern Workflow with Webpack */
-/* by Ijal Fauzi */
-/* https://github.com/ijalfauzi */
-
 @import 'normalize.css';
+@import 'base/_variables';
+@import 'base/_mixins';
+@import 'base/_global';
+@import 'modules/_wrapper';
+@import 'modules/_page-section';
+@import 'modules/_headline';
+@import 'modules/_row';
+@import 'modules/_site-header';
+@import 'modules/_primary-nav';
+@import 'modules/_large-hero';
+@import 'modules/_site-service';
+@import 'modules/_site-application';
+@import 'modules/_site-blog';
+@import 'modules/_site-partner';
+@import 'modules/_site-client';;
+@import 'modules/_site-widget';
+@import 'modules/_site-footer';
+@import 'modules/_btn';
+@import 'modules/_reveal-item';
+@import 'modules/_modal';
+@import 'modules/_social-icons';
+@import 'modules/_site-content';
+@import 'modules/_whatsapp.css';
