@@ -1,0 +1,62 @@
+.headline {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-bottom: 2em;
+
+    @mixin atSmall {
+        font-size: 1.5rem;
+    }
+
+    strong {
+        color: $primaryLight;
+        font-weight: bold;
+    }
+
+    &--less-margin {
+        margin-bottom: 1.25rem;
+        margin-top: 0;
+    }
+
+    &--centered {
+        text-align: center;
+    }
+
+    &--red {
+        color: $primary;
+    }
+
+    &--capitalized {
+        text-transform: capitalize;
+    }
+
+    &--cta {
+        margin: 2rem 0 0;
+    }
+
+    &--featured {
+        text-transform: capitalize;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        @mixin atMedium {
+            margin-top:0;
+        }
+
+        @mixin atLarge {
+            margin-top: 4rem;
+        }
+    }
+
+    &--widget {
+        font-size: 1rem;
+        background-color: $primaryDark;
+        padding:.75em 0;
+        text-transform: uppercase;
+       
+        @mixin atMedium {
+            font-size: 1.17rem;
+            padding: inherit;
+            background-color: transparent;
+        }
+    }
+}

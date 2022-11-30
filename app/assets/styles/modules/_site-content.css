@@ -1,0 +1,529 @@
+.site-content {
+    position: relative;
+    background: $grey;
+
+    @mixin atSmall {
+        padding: 6.5rem 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+
+        @mixin atSmall {
+            font-size: 2rem;
+        }
+    }
+    p.subtitle {
+        font-size: 1.25rem;
+
+        @mixin atSmall {
+            font-size: 1.5rem;
+        }
+    }
+
+    p.subcta {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+
+    h1, p.subtitle {
+        color: $primary;
+    }
+
+    a {
+      color: $primaryLight;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+
+    h3.footer {
+      text-align: center;
+      color: $primary;
+      margin: 1.5rem 0;
+      text-transform: uppercase;
+
+      @mixin atSmall {
+        margin: 3rem 0;
+        font-size: 1.5rem;
+      }
+      span {
+        color: $primaryLight;
+      }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    /* Top and bottom padding for large hero on medium screen */
+    .site-content {
+        padding: 4.5rem 0;
+    }
+    
+    /* Reduce large hero background on medium screen */
+    .site-content::before {
+        top: -80px;
+        left: -40px;
+    }
+}
+  
+  /* Timeline Container */
+  .timeline {
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  
+  /* Card container */
+  .card {
+    position: relative;
+    max-width: 680px;
+  }
+  
+  /* setting padding based on even or odd */
+  .card:nth-child(odd) {
+    padding: 1.875rem 0 1.875rem 1.875rem;
+  }
+  .card:nth-child(even) {
+    padding: 1.875rem 1.875rem 1.875rem 0;
+  }
+  /* Global ::before */
+  .card::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: solid $primary;
+  }
+  
+  /* Setting the border of top, bottom, left */
+  .card:nth-child(odd)::before {
+    left: 0px;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+  }
+  
+  /* Setting the border of top, bottom, right */
+  .card:nth-child(even)::before {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
+  }
+  
+  /* Removing the border if it is the first card */
+  .card:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+  }
+  
+  /* Removing the border if it is the last card  and it's odd */
+  .card:last-child:nth-child(odd)::before {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  /* Removing the border if it is the last card  and it's even */
+  .card:last-child:nth-child(even)::before {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  /* Information about the timeline */
+  .info {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    background-size: cover!important;
+    overflow: hidden;
+
+    @mixin atSmall {
+      margin-bottom: 3rem;
+    }
+
+    &--centered {
+      text-align: center;
+    }
+
+    &--narrow {
+      max-width: 680px;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+    }
+
+    img {
+      max-width: 100px;
+      margin: 0 auto;
+    }
+
+    img.feature {
+      margin: 0 1rem 1rem 0;
+      float: left;
+    }
+
+    h3  {
+      position: relative;
+      background: rgba(255,255,255,.5);
+      backdrop-filter: blur(10px);
+      color: $primary;
+      padding: .625rem 2rem;
+      margin: 20px 0 0;
+      font-size: 1rem;
+      text-align: center;
+      border-radius: 5px;
+
+      @mixin atSmall {
+        margin: 24px -43px 20px 0;
+        border-radius: 5px 0 0 5px;
+        font-size: 1.25rem;
+        transform: skewX(-15deg);
+      }
+    }
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-justify {
+    text-align: justify;
+  }
+
+  .no-margin {
+    margin: 0 auto;
+  }
+
+  .no-padding-bt {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .img-full {
+    max-width: 100%!important;
+    border-radius: 10px;
+  }
+
+  .konsultasi {
+    background: url(https://ijalfauzi.github.io/primadoc/assets/images/konsultasi-arsip-bg.webp);
+  }
+  .pemeliharaan {
+    background: url(https://ijalfauzi.github.io/primadoc/assets/images/pemeliharaan-arsip-bg.webp);
+  }
+  .alih {
+    background: url(https://ijalfauzi.github.io/primadoc/assets/images/alih-media-arsip-bg.webp);
+  }
+  .aplikasi {
+    background: url(https://ijalfauzi.github.io/primadoc/assets/images/aplikasi-primadoc-bg.webp);
+  }
+  .sarana {
+    background: url(https://ijalfauzi.github.io/primadoc/assets/images/sarana-prasarana-arsip-bg.webp);
+  }
+  
+  /* Title of the card */
+  .title {
+    color: $primary;
+    position: relative;
+  }
+  
+  /* Timeline dot  */
+  .title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    border: 3px solid $primary;
+  }
+  
+  /* text right if the card is even  */
+  .card:nth-child(even) > .info > .title {
+    text-align: right;
+  }
+  
+  /* setting dot to the left if the card is odd */
+  .card:nth-child(odd) > .info > .title::before {
+    left: -2.3rem;
+  }
+  
+  /* setting dot to the right if the card is odd */
+  .card:nth-child(even) > .info > .title::before {
+    right: -2.3rem;
+  }
+
+  /* Forms */
+
+  input{
+		margin-bottom: 15px;
+	}
+
+	.kontainer{
+		margin-top: 20px;
+	}
+
+  .hidden {
+    display:none;
+    visibility:hidden;
+  }
+	
+	.form-cta {
+	max-width: 480px;
+	margin: 1rem auto;
+	padding: 20px;
+	background: #f4f7f8;
+	border-radius: 8px;
+	font-family: inherit;
+}
+
+.form-wrap {
+  background: #f7f7f7;
+  border-radius: 10px;
+}
+
+.info-wrap {
+  padding: 1rem .75rem;
+
+  @mixin atSmall {
+    padding: 4.5rem .75rem;
+    
+  }
+}
+
+.form-cta fieldset{
+	border: none;
+	padding:0;
+	margin:0;
+}
+.form-cta legend {
+	font-size: 1rem;
+	margin-bottom: 20px;
+  font-weight: bold;
+}
+.form-cta label {
+	display: block;
+	margin-bottom: 8px;
+}
+.form-cta input[type="text"],
+.form-cta input[type="date"],
+.form-cta input[type="datetime"],
+.form-cta input[type="email"],
+.form-cta input[type="number"],
+.form-cta input[type="search"],
+.form-cta input[type="time"],
+.form-cta input[type="url"],
+.form-cta textarea,
+.form-cta select {
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	background-color: #e8eeef;
+	color:#8a97a0;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 15px;
+}
+.form-cta input[type="text"]:focus,
+.form-cta input[type="date"]:focus,
+.form-cta input[type="datetime"]:focus,
+.form-cta input[type="email"]:focus,
+.form-cta input[type="number"]:focus,
+.form-cta input[type="search"]:focus,
+.form-cta input[type="time"]:focus,
+.form-cta input[type="url"]:focus,
+.form-cta textarea:focus,
+.form-cta select:focus{
+	background: #d2d9dd;
+}
+.form-cta select{
+	-webkit-appearance: menulist-button;
+	height:35px;
+}
+.form-cta .number {
+	background: linear-gradient(180deg, rgba(7,18,75,1) 0%, rgba(2,9,46,1) 100%);
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 4px;
+	line-height: 30px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	border-radius: 10px 10px 10px 0;
+}
+
+.form-cta input[type="submit"],
+.form-cta input[type="button"]
+{
+	position: relative;
+	display: block;
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	margin: 0 auto;
+	background: linear-gradient(180deg, rgba(7,18,75,1) 0%, rgba(2,9,46,1) 100%);
+	text-align: center;
+	font-style: normal;
+	width: 50%;
+  border-radius: 5px;
+	margin-bottom: 10px;
+}
+.form-cta input[type="submit"]:hover,
+.form-cta input[type="button"]:hover
+{
+	background: linear-gradient(180deg, rgba(2,9,46,1) 0%, rgba(7,18,75,1) 100%)!important;
+}
+	
+	@media only screen and (max-width:680px) {
+		.g-recaptcha {
+			transform:scale(.75)!important
+		}
+	}
+  
+.transparent {
+  background-color: $primary!important;
+
+  @mixin atSmall {
+    background-color: transparent;
+  }
+}
+
+
+.service-title {
+  text-align: center;
+  padding: 10rem 0 6rem;
+  margin-top: 0;
+  color: rgba(255,255,255,.85);
+  background-size: cover!important;
+
+  @mixin atLarge {
+    margin-top: -5.875rem;
+  }
+}
+
+.about {
+  background: url("https://ijalfauzi.github.io/primadoc/assets/images/header-about.webp");
+}
+
+.s1 {
+  background: url("https://ijalfauzi.github.io/primadoc/assets/images/konsultasi-arsip-title.webp");
+}
+
+.s2 {
+  background: url("https://ijalfauzi.github.io/primadoc/assets/images/pemeliharaan-arsip-title.webp");
+}
+
+.s3 {
+  background: url("https://ijalfauzi.github.io/primadoc/assets/images/alih-media-arsip-title.webp");
+}
+
+.s4 {
+  background: url("https://ijalfauzi.github.io/primadoc/assets/images/aplikasi-primadoc-title.webp");
+}
+
+.s5 {
+  background: url("https://ijalfauzi.github.io/primadoc/assets/images/sarana-prasarana-arsip-title.webp");
+}
+
+.layanan {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  background-color: #eee;
+
+  @mixin atSmall {
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    position: relative;
+    background-color: $primary;
+    color: $grey;
+    font-size: 1.25rem;
+    text-align: center;
+    padding: .625rem 2rem;
+    margin-right: -2rem;
+    border-radius: 5px 0 0 5px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-width: 7.5px;
+      border-color: transparent transparent #07124B #07124B;
+      border-style: solid;
+      top: -15px;
+      right: -15px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $primary;
+      width: 15px;
+      height: 50px;
+      right: -15px;
+      border-radius: 0 0 5px;
+      top: 0;
+    }
+  }
+
+  img {
+    max-width: 100px;
+    float: left;
+    margin:0 1rem 1rem 0
+  }
+}
+
+.alih-media {
+  max-width: 880px;
+  background-color: #d7e4f4;
+  margin: 0 auto;
+  padding: 2rem 5rem;
+  border-radius: 10px;
+
+  img.icon {
+    position: relative;
+    top: -4rem;
+  }
+
+  .box {
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+    @mixin atSmall {
+      margin-bottom: 0;
+    }
+
+    img {
+      max-width: 100px;
+    }
+  }
+}

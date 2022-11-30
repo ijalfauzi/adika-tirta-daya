@@ -1,0 +1,93 @@
+.large-hero {
+    position: relative;
+    background: $primaryDark;
+    background-image: linear-gradient(180deg, $primaryDark 0%, $primary 50%, $primaryLight 100%);
+
+    @mixin atSmall {
+    padding: 6.5rem 0;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+
+        @mixin atLarge {
+        visibility: visible;
+        }
+    }
+
+    &__text-content {
+        padding-top: 60px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: 400;
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 1.25rem;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 2.5rem;
+        color: $primaryLight;
+
+        @mixin atSmall {
+            font-size: 1.875rem;
+            text-align: inherit;
+            margin-top: 2rem;
+        }
+    }
+
+    &__description {
+        text-align: center;
+        font-weight: 300;
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.25rem;
+        color: $grey;
+
+        @mixin atSmall {
+            font-size: 1.25rem;
+            text-align: inherit;
+        }
+    }
+
+    &__cta {
+        text-align: center;
+        margin-bottom: 1.25rem;
+
+        @mixin atSmall {
+            text-align: inherit;
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    /* Top and bottom padding for large hero on medium screen */
+    .large-hero {
+        padding: 4.5rem 0;
+    }
+    
+    /* Reduce large hero background on medium screen */
+    .large-hero::before {
+        top: -80px;
+        left: -40px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    /* Remove top left background on 1024px screen */
+    .large-hero::before, .site-blog::before, .site-content::before {
+        display: none;
+    }
+}

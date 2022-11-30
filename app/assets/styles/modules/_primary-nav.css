@@ -1,0 +1,212 @@
+/* Basic styling */
+
+  nav {
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    img {
+        width: 200px;
+        height: auto;
+    }
+  }
+
+  .logo {
+    padding: 0;
+    a {
+        margin: 1.125rem 0 0 0;
+    }
+  }
+
+  li.logo a {
+    padding: 0;
+    display: inline-block;
+    margin: .625rem 0 0;
+  }
+
+  .menu,
+  .submenu {
+    list-style-type: none;
+  }
+  .submenu {
+    text-align: left;
+  }
+  .item {
+    @mixin atSmall {
+      padding: 1.25rem;
+    }
+  }
+  .item.button {
+    @mixin atSmall {
+      padding: 1.25rem .3125rem;
+    }
+  }
+  .item:not(.button) a:hover,
+  .item a:hover::after {
+    color: $grey;
+  }
+
+  li.button a {
+    text-transform: capitalize!important;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu li a {
+    color: $grey;
+    display: block;
+    padding: .9375rem .3125rem;
+    text-transform: uppercase;
+  }
+  .menu li.subitem a {
+    padding: 1rem 1.25rem;
+    text-transform: capitalize;
+    text-align: center;
+
+    @mixin atMedium {
+      text-align: left;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $primary;
+    }
+  }
+  .toggle {
+    order: 1;
+    font-size: 1.25rem;
+    transform: scaleX(1.2);
+    transform-origin: 100% 0;
+  }
+
+  .item.button {
+    order: 2;
+  }
+  .item {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+  .active .item {
+    display: block;
+  }
+  .button.secondary {
+    /* divider between buttons and menu links */
+    border-bottom: 1px $grey solid;
+    padding-bottom: 1.25rem;
+    margin-top: 1.25rem;
+
+    @mixin atSmall {
+      margin-top: 0;
+    }
+  }
+  /* Submenu up from mobile screens */
+  .submenu {
+    display: none;
+  }
+  .submenu-active .submenu {
+    display: block;
+  }
+  .has-submenu i {
+    font-size: .75rem;
+  }
+  .has-submenu > a::after {
+    content: url(https://ijalfauzi.github.io/aviat/assets/images/icons/arrow-alt.webp);
+    padding-left: .3125rem;
+  }
+  .subitem a {
+    padding: .625rem .9375rem;
+  }
+  .submenu-active {
+
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .submenu-active li a, .submenu li a {
+    color: $primaryDark;
+  }
+  
+  /* Tablet menu */
+  @media all and (min-width: 700px) {
+    .menu {
+      justify-content: center;
+    }
+    .logo {
+      flex: 1;
+    }
+    .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+    }
+    .toggle {
+      flex: 1;
+      text-align: right;
+      order: 2;
+    }
+    /* Button up from tablet screen */
+    .menu li.button a {
+      padding: .625rem .9375rem;
+      margin: .3125rem 0;
+    }
+    .button.secondary {
+      border: 0;
+    }
+
+  }
+  /* Desktop menu */
+  @media all and (min-width: 960px) {
+    .menu {
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      background: none;
+    }
+    .logo {
+      order: 0;
+    }
+    .item {
+      order: 1;
+      position: relative;
+      display: block;
+      width: auto;
+    }
+    .button {
+      order: 2;
+    }
+    .submenu-active .submenu {
+      display: block;
+      position: absolute;
+      width: max-content;
+      left:0;
+      top: 94px;
+      border-top: 4px solid $primary;
+      z-index: 999;
+      border-radius: 0 0 5px 5px;
+      overflow: hidden;
+    }
+    .toggle {
+      display: none;
+    }
+    .submenu-active {
+      border-radius: 0;
+    }
+  }
+
+
+.toggle a {
+  text-transform: lowercase!important;
+  font-size: 1.5rem;
+  color: $primary;
+}
+
+.has-submenu a:focus {
+  color: $primary!important;
+}

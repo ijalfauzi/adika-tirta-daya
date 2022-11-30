@@ -1,0 +1,20 @@
+.site-footer {
+    background: $primaryDark;
+    color: $white;
+    text-align: center;
+    font-weight: 300;
+    font-size: .75rem;
+    padding: .5rem 0;
+    
+    @mixin atSmall {
+        font-size: .875rem;
+        padding: 1rem 0;
+    }
+    span {
+        display: none;
+        
+        @mixin atSmall {
+            display: inline;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.btn {
+    background-color: #fff;
+    padding: .4375rem 1rem;
+    color: $primary;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: 500;
+
+    &:hover{
+        background-color: $primary;
+        color: $white;
+    }
+
+    &--red {
+        background-color: $primary;
+        color: $white;
+        border: none;
+
+        &:hover {
+            background-color: $primaryDark;
+        }
+    }
+
+    &--featured {
+        @mixin atMedium {
+            margin-bottom: 5px;
+        }
+
+        @mixin atLarge {
+            margin: 0;
+        }
+    }
+
+    &--dark {
+        background: linear-gradient(180deg, rgba(7,18,75,.5) 0%, rgba(2,9,46,.5) 100%);
+        color: $white;
+        margin-top: 15px;
+
+        &:hover {
+            background: linear-gradient(180deg, rgba(2,9,46,.5) 0%, rgba(7,18,75,.5) 100%);
+        }
+    }
+
+    &--yellow {
+        background: $secondary;
+        background: linear-gradient(180deg, $secondary 0%, $secondaryDark 100%);
+
+        &:hover {
+            background: linear-gradient(180deg, $secondaryDark 0%, $secondary 100%);
+        }
+    }
+
+    &--large {
+        padding: 1rem 2rem;
+    }
+}
+
+a.btn--yellow {
+    color: $primaryDark!important;
+}

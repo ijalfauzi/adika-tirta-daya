@@ -1,0 +1,39 @@
+.site-header {
+    display: block;
+    background-color: $primaryDark;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 1;
+        
+
+        @mixin atSmall {
+            grid-template-columns: .75fr 1.5fr .75fr;
+        }
+    }
+
+    &__logo {
+        max-width: auto;
+        height: 60px;
+        display: flex;
+    }
+    
+    &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    &__cta {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+
+        @mixin atSmall {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+

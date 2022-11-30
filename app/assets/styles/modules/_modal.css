@@ -1,0 +1,71 @@
+.modal {
+    display: none;
+    position: fixed; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $primary;
+    color: $white;
+    overflow: hidden;
+
+    &__inner {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+    &__description {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 300;
+        color: $white;
+
+        @mixin atSmall {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__close {
+        background: linear-gradient(180deg, rgba(7,18,75,.75) 0%, rgba(2,9,46,.75) 100%);
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1rem;
+        color: $white;
+        transform: scaleX(1.2);
+        transform-origin: 100% 0;
+        cursor: pointer;
+        padding:.2rem .5rem;
+        border-radius: 5px;
+
+        &:hover {
+            background: linear-gradient(180deg, rgba(2,9,46,.75) 0%, rgba(7,18,75,.75) 100%);
+        }
+    }
+
+    input[type=search] {
+        background: linear-gradient(180deg, rgba(7,18,75,.5) 0%, rgba(2,9,46,.5) 100%);
+        border-width: 0;
+        color: $white;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        border-radius:5px;
+
+        &:focus{
+            outline: none;
+            background: linear-gradient(180deg, rgba(2,9,46,.5) 0%, rgba(7,18,75,.5) 100%);
+        }
+        &::placeholder {
+            color: $white;
+            font-style: italic;
+            text-align: center;
+            font-weight: 300;
+            font-size: .875rem;
+        }
+    }
+}

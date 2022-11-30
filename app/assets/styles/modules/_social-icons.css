@@ -1,0 +1,25 @@
+.social-icons {
+    text-align: center;
+
+    &__icon {
+        background: linear-gradient(180deg, rgba(7,18,75,.5) 0%, rgba(2,9,46,.5) 100%);
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        margin: 0 5px 5px 5px;
+        position: relative;
+        border-radius: 5px;
+
+        &:hover {
+            background: linear-gradient(180deg, rgba(2,9,46,.5) 0%, rgba(7,18,75,.5) 100%);
+        }
+
+        img {
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%, -50%);
+        }
+    }
+}

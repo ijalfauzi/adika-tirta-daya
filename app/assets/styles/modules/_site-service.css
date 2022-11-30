@@ -1,0 +1,43 @@
+.site-service {
+    background-color: $grey;
+}
+
+.service {
+    border: 2px solid #eee;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 0 1.125rem;
+    transition: all .35s ease-out;
+    padding: 1.25rem;
+
+    @mixin atSmall {
+        margin-bottom: 2.8125rem;
+    }
+
+    &:hover {
+        border-color: $primary;
+        transition: all .35s ease-out;
+    }
+
+    @mixin atSmall {
+        padding: 1.25rem;
+    }
+
+    &__icon {
+        max-width: 80px;
+        margin: 0 auto .5em;
+
+        @mixin atSmall {
+            max-width: 100px;
+        }
+    }
+
+    &__title {
+        margin: 0 0 .5em;
+    }
+
+    &__description {
+        margin: 0;
+        min-height: 3rem;
+    }
+}
