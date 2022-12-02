@@ -21,3 +21,11 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+.none {
+    display: none;
+}
+
+.text-right {
+    text-align: right;
+}

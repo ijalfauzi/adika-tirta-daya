@@ -35,17 +35,17 @@
   }
   .item {
     @mixin atSmall {
-      padding: 1.25rem;
+      padding: 1.25rem 1rem;
     }
   }
   .item.button {
     @mixin atSmall {
-      padding: 1.25rem .3125rem;
+      padding: 1.25rem .938rem;
     }
   }
   .item:not(.button) a:hover,
   .item a:hover::after {
-    color: $grey;
+    color: $primary;
   }
 
   li.button a {
@@ -59,9 +59,10 @@
     align-items: center;
   }
   .menu li a {
-    color: $grey;
+    font-size: .813rem;
+    color: #333333;
     display: block;
-    padding: .9375rem .3125rem;
+    padding: .9375rem 0;
     text-transform: uppercase;
   }
   .menu li.subitem a {
@@ -118,7 +119,7 @@
     font-size: .75rem;
   }
   .has-submenu > a::after {
-    content: url(https://ijalfauzi.github.io/aviat/assets/images/icons/arrow-alt.webp);
+    content: url(https://ijalfauzi.github.io/aviat/assets/images/icons/arrow.webp);
     padding-left: .3125rem;
   }
   .subitem a {

@@ -1,7 +1,7 @@
 .site-application {
     position: relative;
-    background: $primary;
-    color: #ccc;
+    background: #c8e0ed;
+    color: #333;
     text-align: center;
     padding: 2.5rem 0;
 
@@ -10,14 +10,7 @@
     }
 
     @mixin atMedium {
-        background: $primary;
-        color: #ccc;
         padding: 4.5rem 0;
         text-align: left;
-    }
-
-    @mixin atLarge {
-        background-image: linear-gradient(180deg, rgba(247,247,247,1) 0%, rgba(17,30,100,1) 100%);
-        color: $primaryDark;
     }
 }
