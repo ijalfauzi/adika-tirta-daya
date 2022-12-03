@@ -5,12 +5,60 @@
     text-align: center;
     padding: 2.5rem 0;
 
+    a {
+        font-style: italic;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+        padding: 0;
+        margin-bottom: .25rem;
+    }
+        
+    i {
+        color: $primary;
+        margin-right: .25rem;
+    }
+
     p {
         margin-bottom: 2rem;
+    }
+
+    .featured-media {
+        margin-top: 2rem;
+    }
+
+    .featured-image {
+        margin-top: 0;
+        position: relative;
+    }
+
+    &--green {
+        background-color: $primary;
+
+        i {
+            color: #333333;
+        }
+
+        img {
+            border-radius: 10px;
+        }
     }
 
     @mixin atMedium {
         padding: 4.5rem 0;
         text-align: left;
     }
+}
+
+.featured-image::before {
+      position: absolute;
+      z-index: 100;
+      left: 0;
+      top: 0;
 }
