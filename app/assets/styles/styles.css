@@ -11,8 +11,7 @@
 @import 'modules/_large-hero';
 @import 'modules/_site-service';
 @import 'modules/_site-application';
-@import 'modules/_site-blog';
-@import 'modules/_site-partner';
+@import 'modules/_site-project';
 @import 'modules/_site-client';;
 @import 'modules/_site-widget';
 @import 'modules/_site-footer';

@@ -1,0 +1,7 @@
+.site-project {
+    background-color: $white;
+
+    img {
+        border-radius: 5px;
+    }
+}

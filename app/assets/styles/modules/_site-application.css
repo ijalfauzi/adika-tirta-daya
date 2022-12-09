@@ -42,7 +42,7 @@
         background-color: $primary;
 
         i {
-            color: #333333;
+            color: green;
         }
 
         img {
@@ -56,9 +56,10 @@
     }
 }
 
-.featured-image::before {
+/* .featured-image::before {
       position: absolute;
+      content: url(https://raw.githubusercontent.com/ijalfauzi/adika-tirta-daya/master/app/assets/images/pattern.webp);
       z-index: 100;
       left: 0;
       top: 0;
-}
+} */
