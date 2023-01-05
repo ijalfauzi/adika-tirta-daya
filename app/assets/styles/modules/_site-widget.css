@@ -35,6 +35,14 @@
     }
 }
 
+.widget-1 {
+    margin-top: 2rem;
+
+    @mixin atSmall {
+        margin-top: 0;
+    }
+}
+
 .widget-2 {
     img {
         max-width: 60px;
