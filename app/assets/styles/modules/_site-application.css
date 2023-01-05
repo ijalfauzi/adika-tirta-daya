@@ -11,13 +11,28 @@
 
     ul {
         margin: 0;
-        padding: 0;
+        padding: 0 0 0 1rem;
+    }
+
+    .featured-list {
+        text-align: left;
     }
 
     li {
-        list-style: none;
-        padding: 0;
+        list-style:none;
         margin-bottom: .25rem;
+        position: relative;
+        padding: 0 0 0 .5rem;
+    }
+
+    li:before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: -16px;
+        width: 16px;
+        height: 16px;
+        background-image: url('https://ijalfauzi.github.io/adika-tirta-daya/assets/images/icons/check-alt.webp');
     }
         
     i {
@@ -47,6 +62,23 @@
 
         img {
             border-radius: 10px;
+        }
+
+        li {
+            list-style:none;
+            margin-bottom: .25rem;
+            position: relative;
+            padding: 0 0 0 .5rem;
+        }
+    
+        li:before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: -16px;
+            width: 16px;
+            height: 16px;
+            background-image: url('https://ijalfauzi.github.io/adika-tirta-daya/assets/images/icons/check.webp');
         }
     }
 
