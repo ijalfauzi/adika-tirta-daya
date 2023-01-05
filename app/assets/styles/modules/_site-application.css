@@ -13,11 +13,7 @@
         margin: 0;
         padding: 0 0 0 1rem;
     }
-
-    .featured-list {
-        text-align: left;
-    }
-
+    
     li {
         list-style:none;
         margin-bottom: .25rem;
