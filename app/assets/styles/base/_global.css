@@ -26,6 +26,14 @@ a {
     display: none;
 }
 
+.text-left {
+    text-align: left;
+}
+
 .text-right {
     text-align: right;
+}
+
+.pt-1 {
+    padding-top: 1rem;
 }
