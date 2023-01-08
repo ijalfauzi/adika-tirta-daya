@@ -186,11 +186,12 @@
       position: absolute;
       width: max-content;
       left:0;
-      top: 94px;
+      top: 91px;
       border-top: 4px solid $primary;
       z-index: 999;
       border-radius: 0 0 5px 5px;
       overflow: hidden;
+      background-color: $white;
     }
     .toggle {
       display: none;

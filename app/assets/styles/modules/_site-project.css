@@ -1,5 +1,6 @@
 .site-project {
     background-color: $white;
+    text-align: center;
 
     img {
         margin-bottom: 1rem;
