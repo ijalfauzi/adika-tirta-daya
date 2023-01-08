@@ -271,5 +271,132 @@
             </p>
         </div>
     </footer>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal__inner">
+                <h2 class="headline headline--centered headline--less-margin">ATD Search</h2>
+            <div class="wrapper wrapper--narrow">
+            <form role="search" method="get" action="https://adikatirtadaya.co.id/">
+                <input type="search" name="s" placeholder="Type and hit enter">
+            </form>
+            <p class="modal__description">Type your keywords on the form above. Or, connect with us on any of the platforms below!</p>
+        </div>
+        <div class="social-icons">
+        <a href="https://www.facebook.com/adiktirtadaya/" class="social-icons__icon" title="Facebook"><img srcset="assets/images/icons/facebook.webp" alt="Facebook"></a>
+        <a href="https://www.instagram.com/adikatirtadaya_/" class="social-icons__icon" title="Instagram"><img srcset="assets/images/icons/instagram.webp" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/company/adika-tirta-daya/" class="social-icons__icon" title="LinkedIn"><img srcset="assets/images/icons/linkedin.webp" alt="Linkedin"></a>
+        <a href="https://www.youtube.com/channel/UCXKPdXfIRLODfOs8qykL1Mg" class="social-icons__icon" title="Youtube"><img srcset="assets/images/icons/youtube.webp" alt="Youtube"></a>
+        <a href="https://twitter.com/adikatirtadaya/" class="social-icons__icon" title="Twitter"><img srcset="assets/images/icons/twitter.webp" alt="Twitter"></a>
+        </div>
+        </div>
+        <span class="modal__close">X</span>
+        </div>
+
+    </div>
+
+    <script>
+        // Popup Search Box
+
+// Get the modal
+
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+
+var span = document.getElementsByClassName("modal__close")[0];
+
+// When the user clicks the button, open the modal 
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+
+span.onclick = function() {
+modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+
+window.onclick = function(event) {
+if (event.target == modal) {
+modal.style.display = "none";
+}
+}
+
+// Responsive Navigation Menu
+
+const toggle = document.querySelector(".toggle");
+const menu = document.querySelector(".menu");
+const items = document.querySelectorAll(".item");
+
+// Toggle mobile menu
+
+function toggleMenu() {
+if (menu.classList.contains("active")) {
+menu.classList.remove("active");
+toggle.querySelector("a").innerHTML = "&equiv;";
+} else {
+menu.classList.add("active");
+toggle.querySelector("a").innerHTML = "x";
+}
+}
+
+// Activate submenu
+
+function toggleItem() {
+if (this.classList.contains("submenu-active")) {
+this.classList.remove("submenu-active");
+} else if (menu.querySelector(".submenu-active")) {
+menu.querySelector(".submenu-active").classList.remove("submenu-active");
+this.classList.add("submenu-active");
+} else {
+this.classList.add("submenu-active");
+}
+}
+
+// Close submenu anywhere
+
+function closeSubmenu(e) {
+if (menu.querySelector(".submenu-active")) {
+let isClickInside = menu
+.querySelector(".submenu-active")
+.contains(e.target);
+
+if (!isClickInside && menu.querySelector(".submenu-active")) {
+menu.querySelector(".submenu-active").classList.remove("submenu-active");
+}
+}
+}
+
+// Event Listeners
+
+toggle.addEventListener("click", toggleMenu, false);
+for (let item of items) {
+if (item.querySelector(".submenu")) {
+item.addEventListener("click", toggleItem, false);
+}
+item.addEventListener("keypress", toggleItem, false);
+}
+document.addEventListener("click", closeSubmenu, false);
+
+// Google Analytics
+
+
+
+// Google Tag Manager
+
+
+
+    </script>
 </body>
 </html>
