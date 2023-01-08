@@ -8,7 +8,6 @@
     }
 
     img {
-        width: 200px;
         height: auto;
     }
   }
@@ -119,7 +118,7 @@
     font-size: .75rem;
   }
   .has-submenu > a::after {
-    content: url(https://ijalfauzi.github.io/aviat/assets/images/icons/arrow.webp);
+    content: url('https://ijalfauzi.github.io/adika-tirta-daya/assets/images/icons/arrow.webp');
     padding-left: .3125rem;
   }
   .subitem a {
