@@ -19,8 +19,8 @@
 }
 
 a.blantershow-chat {
-	background: linear-gradient(180deg, rgba(249,206,67,1) 0%, rgba(236,185,19,1) 100%);
-	color: $primaryDark;
+	background: linear-gradient(180deg, rgba(71, 186, 136, 1) 0%, rgba(65, 163, 118, 1) 100%);
+	color: $white;
 	position: fixed;
 	z-index: 98;
 	bottom: 25px;
@@ -48,15 +48,15 @@ a.blantershow-chat img {
 }
 
 .header-chat {
-	background: linear-gradient(180deg, rgba(249,206,67,1) 0%, rgba(236,185,19,1) 100%);
-	color: $primaryDark;
+	background: linear-gradient(180deg, rgba(71, 186, 136, 1) 0%, rgba(65, 163, 118, 1) 100%);
+	color: $white;
 	padding: 20px
 }
 
 .header-chat h3 {
 	margin: 0 0 10px;
     font-size:3rem;
-    color: $primaryDark;
+    color: $white;
 }
 
 .header-chat p {
@@ -108,7 +108,7 @@ span.chat-nama {
 
 #get-label,
 #get-nama {
-	color: $primaryDark;
+	color: $white;
 }
 
 span.my-number {
@@ -162,7 +162,7 @@ a#back-it {
 }
 
 a#back-it, a#send-it {
-	color: $primaryDark;
+	color: $white;
 	width: 90px;
 	margin: 90px 0 0 5px;
 	padding: 5px 20px;
@@ -198,7 +198,7 @@ a.close-chat {
 	position: absolute;
 	top: 5px;
 	right: 15px;
-	color: $primaryDark;
+	color: $white;
 	font-size: 30px
 }
 
