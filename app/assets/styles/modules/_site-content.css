@@ -455,7 +455,7 @@
   flex-direction: column;
   padding: 2rem;
   margin-bottom: 1rem;
-  background-color: #eee;
+  background-color: $greyDark;
 
   @mixin atSmall {
     margin-bottom: 2rem;
