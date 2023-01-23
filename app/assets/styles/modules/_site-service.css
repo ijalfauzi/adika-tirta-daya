@@ -3,7 +3,8 @@
 }
 
 .service {
-    border: 2px solid #eee;
+    border-bottom: 2px solid $greyDark;
+    background-color: $greyDark;
     border-radius: 10px;
     text-align: center;
     margin: 0 0 1.125rem;
@@ -15,7 +16,7 @@
     }
 
     &:hover {
-        border-color: $primary;
+        border-bottom-color: $primary;
         transition: all .35s ease-out;
     }
 
