@@ -5,5 +5,35 @@
     img {
         margin-bottom: 1rem;
         border-radius: 5px;
+        width: 100%;
+
+        @mixin atMedium {
+            width: auto;
+        }
     }
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+    display: block;
+
+    h3 {
+        font-style: italic;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 6px;
+        text-align: center;
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(66,187,135,0.75) 50%, rgba(12,145,88,0.85) 100%);
+        padding: 2.5rem 0 0.75rem;
+        color: #f7f7f7;
+        border-radius: 0 0 5px 5px;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+}
+
+.site-project a:hover > h3 {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(66,187,135,1) 50%, rgba(12,145,88,1) 100%);
 }
